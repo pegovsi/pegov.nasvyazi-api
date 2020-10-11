@@ -25,7 +25,7 @@ namespace Pegov.Nasvyazi.Rest.Function.Test.Common
 
         private async Task<string> GetAccessTokenAsync()
         {
-            return string.Empty;
+            return await Task.FromResult(string.Empty);
             // using var client = new HttpClient();
             // var model = SignInSmsCodeViewModel.Create(Const.Login, Const.Code);
             // var response = await client.PostAsJsonAsync(Const.API, model);

@@ -18,13 +18,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegov.Nasvyazi.Application"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{7053D6F0-B92F-42C0-B19D-644159A41AED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegov.Nasvyazi.Persistence", "Pegov.Nasvyazi.Persistence\Pegov.Nasvyazi.Persistence.csproj", "{A6C5B485-6684-4A1E-A4E0-7A2DE188D4DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegov.Nasvyazi.Persistence.Raven", "Pegov.Nasvyazi.Persistence.Raven\Pegov.Nasvyazi.Persistence.Raven.csproj", "{A6C5B485-6684-4A1E-A4E0-7A2DE188D4DE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{B81CDC99-F318-4A65-9E0F-94D161D2551F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegov.Nasvyazi.Application.Test", "Pegov.Nasvyazi.Application.Test\Pegov.Nasvyazi.Application.Test.csproj", "{6E03D0C9-3648-40E4-BE91-FB97C5943B7E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegov.Nasvyazi.Rest.Function.Test", "Pegov.Nasvyazi.Rest.Function.Test\Pegov.Nasvyazi.Rest.Function.Test.csproj", "{172C19B1-3C5A-479E-BE6D-547413662833}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegov.Nasvyazi.Persistence.Postgres", "Pegov.Nasvyazi.Persistence.Postgres\Pegov.Nasvyazi.Persistence.Postgres.csproj", "{5E261FE1-0C67-4438-9CB0-2A8483BE655F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pegov.Nasvyazi.Raven.Domains", "Pegov.Nasvyazi.Raven.Domains\Pegov.Nasvyazi.Raven.Domains.csproj", "{A772485D-85E7-4ECD-B721-93348D55675C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -60,6 +64,14 @@ Global
 		{172C19B1-3C5A-479E-BE6D-547413662833}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{172C19B1-3C5A-479E-BE6D-547413662833}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{172C19B1-3C5A-479E-BE6D-547413662833}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E261FE1-0C67-4438-9CB0-2A8483BE655F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E261FE1-0C67-4438-9CB0-2A8483BE655F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E261FE1-0C67-4438-9CB0-2A8483BE655F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E261FE1-0C67-4438-9CB0-2A8483BE655F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A772485D-85E7-4ECD-B721-93348D55675C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A772485D-85E7-4ECD-B721-93348D55675C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A772485D-85E7-4ECD-B721-93348D55675C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A772485D-85E7-4ECD-B721-93348D55675C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{8C52EF50-D6EC-4B56-BD7A-F36DC18D1A1B} = {3824F1AB-2D17-4170-8C41-0D902C1E80B2}
@@ -73,5 +85,7 @@ Global
 		{A6C5B485-6684-4A1E-A4E0-7A2DE188D4DE} = {ED68AD5D-B46E-4BC1-BEF9-1B307E577FB5}
 		{6E03D0C9-3648-40E4-BE91-FB97C5943B7E} = {B81CDC99-F318-4A65-9E0F-94D161D2551F}
 		{172C19B1-3C5A-479E-BE6D-547413662833} = {B81CDC99-F318-4A65-9E0F-94D161D2551F}
+		{5E261FE1-0C67-4438-9CB0-2A8483BE655F} = {ED68AD5D-B46E-4BC1-BEF9-1B307E577FB5}
+		{A772485D-85E7-4ECD-B721-93348D55675C} = {A737BB78-972B-4973-BADC-4C77FE3295BC}
 	EndGlobalSection
 EndGlobal

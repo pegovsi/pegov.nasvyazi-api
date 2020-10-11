@@ -1,4 +1,4 @@
-namespace Pegov.Nasvayzi.Common
+namespace Pegov.Nasvyazi.Common
 {
     public class VersionController
     {

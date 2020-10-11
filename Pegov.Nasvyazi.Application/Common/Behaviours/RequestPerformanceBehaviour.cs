@@ -4,9 +4,9 @@ using System;
 using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
-using Pegov.Nasvayzi.Common;
+using Pegov.Nasvyazi.Common;
 
-namespace Pegov.Nasvayzi.Application.Common.Behaviours
+namespace Pegov.Nasvyazi.Application.Common.Behaviours
 {
     public class RequestPerformanceBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
     {

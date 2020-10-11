@@ -4,14 +4,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 using MediatR;
 using Newtonsoft.Json;
 
-namespace pegov.nasvayzi.Domains.Common
+namespace Pegov.Nasvyazi.Domains.Common
 {
     public class Entity
     {
         [NotMapped]
         [JsonIgnore]
         public bool IsNew { get; set; }
-        public virtual string Id { get; protected set; }
+        public virtual Guid Id { get; protected set; }
         public string CreatedBy { get; set; }
 
         public DateTime Created { get; set; }
@@ -20,18 +20,9 @@ namespace pegov.nasvayzi.Domains.Common
 
         public DateTime? Modified { get; set; }
 
-        public virtual Guid GetId()
-        {
-            return string.IsNullOrEmpty(Id) ? Guid.Empty : Guid.Parse(Id);
-        }
-
         public virtual Guid NewGuid()
         {
             return Guid.NewGuid();
-        }
-        public virtual string NewGuidString()
-        {
-            return Guid.NewGuid().ToString();
         }
 
         private List<INotification> _domainEvents;

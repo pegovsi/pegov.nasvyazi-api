@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
-namespace pegov.nasvayzi.Api.Filters
+namespace pegov.Nasvyazi.Api.Filters
 {
     public class FluentValidationExceptionResponse
     {

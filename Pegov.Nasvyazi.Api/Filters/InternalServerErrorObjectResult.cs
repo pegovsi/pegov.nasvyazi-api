@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace pegov.nasvayzi.Api.Filters
+namespace pegov.Nasvyazi.Api.Filters
 {
     [Microsoft.AspNetCore.Mvc.Infrastructure.DefaultStatusCode(500)]
     public class InternalServerErrorObjectResult : ObjectResult

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using FluentValidation.Results;
 
-namespace pegov.nasvayzi.Application.Common.Behaviours
+namespace Pegov.Nasvyazi.Application.Common.Behaviours
 {
     public class ValidationException: Exception
     {

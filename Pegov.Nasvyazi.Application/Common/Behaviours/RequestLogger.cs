@@ -1,11 +1,11 @@
-﻿using MediatR.Pipeline;
-using Microsoft.Extensions.Logging;
-using System;
+﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
- using Pegov.Nasvayzi.Common;
+using MediatR.Pipeline;
+using Microsoft.Extensions.Logging;
+using Pegov.Nasvyazi.Common;
 
- namespace Pegov.Nasvayzi.Application.Common.Behaviours
+namespace Pegov.Nasvyazi.Application.Common.Behaviours
 {
     public class RequestLogger<TRequest> : IRequestPreProcessor<TRequest>
     {

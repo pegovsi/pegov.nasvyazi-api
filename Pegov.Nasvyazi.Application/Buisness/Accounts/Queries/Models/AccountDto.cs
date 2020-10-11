@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using Pegov.Nasvayzi.Application.Buisness.Organization.Queries.Models;
+using Pegov.Nasvyazi.Application.Buisness.Organization.Queries.Models;
 
-namespace Pegov.Nasvayzi.Application.Buisness.Accounts.Queries.Models
+namespace Pegov.Nasvyazi.Application.Buisness.Accounts.Queries.Models
 {
     public class AccountDto
     {

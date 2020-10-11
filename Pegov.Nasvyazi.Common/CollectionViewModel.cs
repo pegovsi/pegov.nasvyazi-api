@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Pegov.Nasvayzi.Common
+namespace Pegov.Nasvyazi.Common
 {
     public class CollectionViewModel<T>
     {

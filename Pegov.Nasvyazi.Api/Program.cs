@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace pegov.nasvayzi.Api
+namespace pegov.Nasvyazi.Api
 {
     public class Program
     {

@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-      "pegov.nasvayzi_api": {
+      "pegov.Nasvyazi_api": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",

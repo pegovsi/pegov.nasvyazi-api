@@ -1,10 +1,10 @@
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Pegov.Nasvayzi.Application.Buisness.Version.Queries.GetVersion;
-using Pegov.Nasvayzi.Common;
+using Pegov.Nasvyazi.Application.Buisness.Version.Queries.GetVersion;
+using Pegov.Nasvyazi.Common;
 
-namespace Pegov.Nasvayzi.Api.Controllers
+namespace Pegov.Nasvyazi.Api.Controllers
 {
     [Route("api/v{version:apiVersion}/home")]
     [ApiVersion(VersionController.Version1_0)]

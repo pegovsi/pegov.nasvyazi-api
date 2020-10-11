@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using MediatR;
-using Pegov.Nasvayzi.Common;
+using Pegov.Nasvyazi.Common;
 
-namespace Pegov.Nasvayzi.Application.Buisness.Accounts.Commands.CreateAccount
+namespace Pegov.Nasvyazi.Application.Buisness.Accounts.Commands.CreateAccount
 {
     public class CreateAccountCommand : IRequest<Result<Guid>>
     {

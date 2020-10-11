@@ -1,7 +1,7 @@
-using Pegov.Nasvayzi.Application.Buisness.Organization.Queries.Models;
-using Pegov.Nasvayzi.Common;
+using Pegov.Nasvyazi.Application.Buisness.Organization.Queries.Models;
+using Pegov.Nasvyazi.Common;
 
-namespace Pegov.Nasvayzi.Application.Buisness.Organization.Queries.GetOrganizationsPages
+namespace Pegov.Nasvyazi.Application.Buisness.Organization.Queries.GetOrganizationsPages
 {
     public class OrganizationViewModel : CollectionViewModel<OrganizationDto>
     {

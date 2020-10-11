@@ -2,12 +2,12 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Pegov.Nasvayzi.Application.Buisness.Accounts.Commands.CreateAccount;
-using Pegov.Nasvayzi.Application.Buisness.Accounts.Queries.GetAccountById;
-using Pegov.Nasvayzi.Application.Buisness.Accounts.Queries.Models;
-using Pegov.Nasvayzi.Common;
+using Pegov.Nasvyazi.Application.Buisness.Accounts.Commands.CreateAccount;
+using Pegov.Nasvyazi.Application.Buisness.Accounts.Queries.GetAccountById;
+using Pegov.Nasvyazi.Application.Buisness.Accounts.Queries.Models;
+using Pegov.Nasvyazi.Common;
 
-namespace Pegov.Nasvayzi.Api.Controllers
+namespace Pegov.Nasvyazi.Api.Controllers
 {
     [Route("api/v{version:apiVersion}/account")]
     [ApiVersion(VersionController.Version1_0)]

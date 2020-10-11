@@ -2,12 +2,12 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
-        <RootNamespace>Pegov.Nasvayzi.Api</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\Pegov.Nasvyazi.Common\Pegov.Nasvyazi.Common.csproj" />
-      <ProjectReference Include="..\Pegov.Nasvyazi.Persistence\Pegov.Nasvyazi.Persistence.csproj" />
+      <ProjectReference Include="..\Pegov.Nasvyazi.Persistence.Postgres\Pegov.Nasvyazi.Persistence.Postgres.csproj" />
+      <ProjectReference Include="..\Pegov.Nasvyazi.Persistence.Raven\Pegov.Nasvyazi.Persistence.Raven.csproj" />
     </ItemGroup>
 
     <ItemGroup>

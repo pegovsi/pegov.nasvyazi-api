@@ -4,15 +4,15 @@ using System.Net;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using pegov.nasvayzi.Application.Common.Behaviours;
-using pegov.nasvayzi.Application.Common.Exceptions;
+using Pegov.Nasvyazi.Application.Common.Behaviours;
+using Pegov.Nasvyazi.Application.Common.Exceptions;
 using Raven.Client.Exceptions;
 using Raven.Client.Exceptions.Security;
 using Serilog;
-using ConflictException = pegov.nasvayzi.Application.Common.Exceptions.ConflictException;
-using InvalidOperationException = System.InvalidOperationException;
+using ConflictException = Pegov.Nasvyazi.Application.Common.Exceptions.ConflictException;
+using InvalidOperationException = Pegov.Nasvyazi.Application.Common.Exceptions.InvalidOperationException;
 
-namespace pegov.nasvayzi.Api.Filters
+namespace pegov.Nasvyazi.Api.Filters
 {
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
     public sealed class CustomExceptionFilterAttribute : ExceptionFilterAttribute
@@ -62,7 +62,7 @@ namespace pegov.nasvayzi.Api.Filters
         }
 
         #region private
-        private IActionResult ResultBadRequestFluentValidation(IDictionary<string, string[]> exceptions)
+        private static IActionResult ResultBadRequestFluentValidation(IDictionary<string, string[]> exceptions)
         {
             var ex = new FluentValidationExceptionResponseBody()
                 { Status = StatusCodes.Status400BadRequest };
@@ -75,7 +75,7 @@ namespace pegov.nasvayzi.Api.Filters
             return new JsonResult(ex);
         }
 
-        private IActionResult ResultBadRequest(IDictionary<string, string[]> exceptions)
+        private static IActionResult ResultBadRequest(IDictionary<string, string[]> exceptions)
         {
             var responseErrors = new List<string>();
 
@@ -90,7 +90,7 @@ namespace pegov.nasvayzi.Api.Filters
             return new JsonResult(StatusCodes.Status400BadRequest);
         }
 
-        private IActionResult ResultException(string message, string stackTrace, HttpStatusCode code)
+        private static IActionResult ResultException(string message, string stackTrace, HttpStatusCode code)
         {
             var responseErrors = new List<string>();
             Log.Information($"{nameof(CustomExceptionFilterAttribute)} ResultException message: {message}");

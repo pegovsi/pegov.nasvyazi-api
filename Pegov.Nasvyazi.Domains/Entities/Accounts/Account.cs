@@ -1,17 +1,16 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using pegov.nasvayzi.Domains.Common;
-using pegov.nasvayzi.Domains.Entities.Organizations;
+using Pegov.Nasvyazi.Domains.Entities.Organizations;
+using Pegov.Nasvyazi.Domains.Common;
 
-namespace pegov.nasvayzi.Domains.Entities.Accounts
+namespace Pegov.Nasvyazi.Domains.Entities.Accounts
 {
     public class Account : Entity, IAggregateRoot
     {
         protected Account()
         {
-            Id = NewGuidString();
-            OrganizationIds = new HashSet<string>();
+            Id = Guid.NewGuid();
+            _organizations = new List<Organization>();
         }
 
         public Account(string firstName, string lastName, string email, string phone)
@@ -19,30 +18,30 @@ namespace pegov.nasvayzi.Domains.Entities.Accounts
         {
             FirstName = firstName;
             LastName = lastName;
-            Email = email;
-            Phone = phone;
+            Email = new EmailValueObject(email);
+            Phone = new PhoneValueObject(phone);
         }
 
-
-        public override string Id { get; protected set; }
-        
         public string FirstName { get; protected set; }
-        public string LastName { get; private set; }
-        public string Email { get; protected set; }
-        public string Phone { get; protected set; }
+        public string LastName { get; protected set; }
+        public EmailValueObject Email { get; protected set; }
+        public PhoneValueObject Phone { get; protected set; }
 
-        public ICollection<string> OrganizationIds { get; protected set; }
+        private readonly List<Organization> _organizations;
+        public IReadOnlyCollection<Organization> Organization => _organizations;
 
 
-        public void AddOrganization(string organizationId)
+        public void AddOrganization(Guid organizationId)
         {
-            OrganizationIds.Add(organizationId);
+            var organization = new Organization(organizationId);
+            _organizations.Add(organization);
         }
         public void AddOrganization(IEnumerable<Guid> organizationIds)
         {
             foreach (var organizationId in organizationIds)
             {
-                OrganizationIds.Add(organizationId.ToString());   
+                var organization = new Organization(organizationId);
+                _organizations.Add(organization);   
             }
         }
     }

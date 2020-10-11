@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 
-namespace Pegov.Nasvayzi.Api.Extensions
+namespace Pegov.Nasvyazi.Api.Extensions
 {
     public static class AutoMapperStartupExtensions
     {

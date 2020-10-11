@@ -1,8 +1,8 @@
-﻿﻿using System.Threading;
+﻿using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
 
-namespace Prt.Graphit.Application.Common.Behaviours
+namespace Pegov.Nasvyazi.Application.Common.Behaviours
 {
     public class RequestRolesBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
         where TRequest : IRequest<TResponse>

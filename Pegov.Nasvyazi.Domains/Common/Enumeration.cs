@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace pegov.nasvayzi.Domains.Common
+namespace Pegov.Nasvyazi.Domains.Common
 {
     public class Enumeration : IComparable
     {

@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Pegov.Nasvayzi.Api.Controllers
+namespace Pegov.Nasvyazi.Api.Controllers
 {
     [ApiController]
     [Produces("application/json")]

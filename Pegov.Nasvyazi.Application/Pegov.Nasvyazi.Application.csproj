@@ -2,18 +2,19 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
-        <RootNamespace>pegov.nasvayzi.Application</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\Pegov.Nasvyazi.Common\Pegov.Nasvyazi.Common.csproj" />
       <ProjectReference Include="..\Pegov.Nasvyazi.Domains\Pegov.Nasvyazi.Domains.csproj" />
+      <ProjectReference Include="..\Pegov.Nasvyazi.Raven.Domains\Pegov.Nasvyazi.Raven.Domains.csproj" />
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="AutoMapper" Version="10.0.0" />
         <PackageReference Include="FluentValidation" Version="9.2.0" />
         <PackageReference Include="MediatR" Version="9.0.0" />
         <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.8" />
         <PackageReference Include="RavenDB.Client" Version="5.0.3" />        
     </ItemGroup>
 </Project>

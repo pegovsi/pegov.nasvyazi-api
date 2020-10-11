@@ -1,8 +1,8 @@
 using System;
 using MediatR;
-using Pegov.Nasvayzi.Common;
+using Pegov.Nasvyazi.Common;
 
-namespace Pegov.Nasvayzi.Application.Buisness.Organization.Commands.CreateOrganization
+namespace Pegov.Nasvyazi.Application.Buisness.Organization.Commands.CreateOrganization
 {
     public class CreateOrganizationCommand : IRequest<Result<Guid>>
     {

@@ -1,16 +1,17 @@
 using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
-using Pegov.Nasvayzi.Application.Infrastructure;
-using Pegov.Nasvayzi.Common;
 using Pegov.Nasvyazi.Application;
+using Pegov.Nasvyazi.Application.Common.Interfaces;
+using Pegov.Nasvyazi.Application.Infrastructure;
+using Pegov.Nasvyazi.Common;
 
-namespace Pegov.Nasvayzi.Application.Buisness.Version.Queries.GetVersion
+namespace Pegov.Nasvyazi.Application.Buisness.Version.Queries.GetVersion
 {
     public class GetVersionQueryHandler : HandlerBase<GetVersionQuery, string>
     {
-        public GetVersionQueryHandler(IRavenStore store, ICurrentUserService currentUserService, IMapper mapper)
-            : base(store, currentUserService, mapper)
+        public GetVersionQueryHandler(IAppDbContext context, IRavenStore store, ICurrentUserService currentUserService, IMapper mapper)
+            : base(context, store, currentUserService, mapper)
         {
         }
 

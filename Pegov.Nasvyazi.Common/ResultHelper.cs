@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Pegov.Nasvayzi.Common
+namespace Pegov.Nasvyazi.Common
 {
     public static class ResultHelper
     {

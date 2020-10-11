@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace pegov.nasvayzi.Domains.Common
+namespace Pegov.Nasvyazi.Domains.Common
 {
     public abstract class ValueObject
     {

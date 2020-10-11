@@ -4,7 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Serilog;
 
-namespace Pegov.Nasvayzi.Api.Extensions
+namespace Pegov.Nasvyazi.Api.Extensions
 {
     public static class LoggingStartupExtensions
     {

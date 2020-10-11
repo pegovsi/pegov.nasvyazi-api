@@ -1,7 +1,7 @@
 using MediatR;
-using Pegov.Nasvayzi.Application.Buisness.Accounts.Queries.Models;
+using Pegov.Nasvyazi.Application.Buisness.Accounts.Queries.Models;
 
-namespace Pegov.Nasvayzi.Application.Buisness.Accounts.Queries.GetAccountById
+namespace Pegov.Nasvyazi.Application.Buisness.Accounts.Queries.GetAccountById
 {
     public class GetAccountByIdQuery : IRequest<AccountDto>
     {

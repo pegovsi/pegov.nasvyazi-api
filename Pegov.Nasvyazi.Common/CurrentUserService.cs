@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Http;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 
-namespace Pegov.Nasvayzi.Common
+namespace Pegov.Nasvyazi.Common
 {
     public class CurrentUserService : ICurrentUserService
     {

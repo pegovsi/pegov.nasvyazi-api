@@ -1,10 +1,10 @@
 using System.Reflection;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
-using Pegov.Nasvayzi.Application.Common.Behaviours;
-using Prt.Graphit.Application.Common.Behaviours;
+using Pegov.Nasvyazi.Application.Common.Behaviours;
+using Pegov.Nasvyazi.Application.Common.Behaviours;
 
-namespace Pegov.Nasvayzi.Application
+namespace Pegov.Nasvyazi.Application
 {
     public static class DependencyInjection
     {

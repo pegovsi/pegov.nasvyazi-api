@@ -27,6 +27,7 @@
         <e p="extensions" t="Include">
           <e p="AutoMapperStartupExtensions.cs" t="Include" />
           <e p="LoggingStartupExtensions.cs" t="Include" />
+          <e p="PersistencePostgresStartupExtensions.cs" t="Include" />
           <e p="PersistenceStartupExtensions.cs" t="Include" />
         </e>
         <e p="Filters" t="Include">
@@ -65,6 +66,14 @@
               </e>
               <e p="Models" t="Include">
                 <e p="AccountDto.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Message" t="Include">
+            <e p="Commands" t="Include">
+              <e p="SaveMessage" t="Include">
+                <e p="SaveMessageCommand.cs" t="Include" />
+                <e p="SaveMessageCommandHandler.cs" t="Include" />
               </e>
             </e>
           </e>
@@ -107,6 +116,12 @@
             <e p="ConflictException.cs" t="Include" />
             <e p="InvalidOperationException.cs" t="Include" />
             <e p="NotFoundException.cs" t="Include" />
+          </e>
+          <e p="Extension" t="Include">
+            <e p="MediatorExtension.cs" t="Include" />
+          </e>
+          <e p="Interfaces" t="Include">
+            <e p="IAppDbContext.cs" t="Include" />
           </e>
           <e p="MiscProfile.cs" t="Include" />
         </e>
@@ -163,6 +178,8 @@
         <e p="Entities" t="Include">
           <e p="Accounts" t="Include">
             <e p="Account.cs" t="Include" />
+            <e p="EmailValueObject.cs" t="Include" />
+            <e p="PhoneValueObject.cs" t="Include" />
           </e>
           <e p="Organizations" t="Include">
             <e p="Organization.cs" t="Include" />
@@ -178,19 +195,54 @@
         <e p="Pegov.Nasvyazi.Domains.csproj" t="IncludeRecursive" />
         <e p="Services" t="Include" />
       </e>
-      <e p="Pegov.Nasvyazi.Persistence" t="IncludeRecursive">
+      <e p="Pegov.Nasvyazi.Persistence.Postgres" t="IncludeRecursive">
+        <e p="AppDbContext.cs" t="Include" />
+        <e p="AppDbContextFactory.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Configurations" t="Include" />
+        <e p="DependencyInjection.cs" t="Include" />
+        <e p="DesignTimeDbContextFactoryBase.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Pegov.Nasvyazi.Persistence.Postgres.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Pegov.Nasvyazi.Persistence.Postgres.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="Pegov.Nasvyazi.Persistence.Raven" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="DependencyInjection.cs" t="Include" />
         <e p="DocumentStoreHolder.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
-              <e p="Pegov.Nasvyazi.Persistence.AssemblyInfo.cs" t="Include" />
+              <e p="Pegov.Nasvyazi.Persistence.Raven.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
-        <e p="Pegov.Nasvyazi.Persistence.csproj" t="IncludeRecursive" />
+        <e p="Pegov.Nasvyazi.Persistence.Raven.csproj" t="IncludeRecursive" />
         <e p="RavenStore.cs" t="Include" />
+      </e>
+      <e p="Pegov.Nasvyazi.Raven.Domains" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Common" t="Include">
+          <e p="Entity.cs" t="Include" />
+        </e>
+        <e p="Entities" t="Include">
+          <e p="Message.cs" t="Include" />
+          <e p="MessageType.cs" t="Include" />
+          <e p="PinnedMessage.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.1" t="Include">
+              <e p="Pegov.Nasvyazi.Raven.Domains.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Pegov.Nasvyazi.Raven.Domains.csproj" t="IncludeRecursive" />
       </e>
       <e p="Pegov.Nasvyazi.Rest.Function.Test" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />

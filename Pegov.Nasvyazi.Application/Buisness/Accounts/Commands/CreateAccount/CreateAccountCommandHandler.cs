@@ -2,18 +2,17 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
-using Pegov.Nasvayzi.Application.Infrastructure;
-using Pegov.Nasvayzi.Common;
-using pegov.nasvayzi.Domains.Entities.Accounts;
-using Pegov.Nasvyazi.Application;
-using Raven.Client.Documents;
+using Pegov.Nasvyazi.Domains.Entities.Accounts;
+using Pegov.Nasvyazi.Application.Common.Interfaces;
+using Pegov.Nasvyazi.Application.Infrastructure;
+using Pegov.Nasvyazi.Common;
 
-namespace Pegov.Nasvayzi.Application.Buisness.Accounts.Commands.CreateAccount
+namespace Pegov.Nasvyazi.Application.Buisness.Accounts.Commands.CreateAccount
 {
     public class CreateAccountCommandHandler : HandlerBase<CreateAccountCommand, Result<Guid>>
     {
-        public CreateAccountCommandHandler(IRavenStore store, ICurrentUserService currentUserService, IMapper mapper)
-            : base(store, currentUserService, mapper)
+        public CreateAccountCommandHandler(IAppDbContext context, IRavenStore store, ICurrentUserService currentUserService, IMapper mapper)
+            : base(context, store, currentUserService, mapper)
         {
         }
 
@@ -21,19 +20,16 @@ namespace Pegov.Nasvayzi.Application.Buisness.Accounts.Commands.CreateAccount
         {
             var account = new Account(request.FirstName, request.LastName, request.Email, request.Phone);
             
-            var store = Store.Create();
-            using var session = store.OpenAsyncSession();
-
             // var organization = await session.
-            //     Query<pegov.nasvayzi.Domains.Entities.Organizations.Organization>()
+            //     Query<pegov.Nasvyazi.Domains.Entities.Organizations.Organization>()
             //     .FirstOrDefaultAsync(x => x.Id == request.OrganizationId.ToString(), cancellationToken);
             
             
             account.AddOrganization(request.OrganizationIds);
-            await session.StoreAsync(account, cancellationToken);
-            await session.SaveChangesAsync(cancellationToken);
+            await DbContext.Set<Account>().AddAsync(account, cancellationToken);
+            await DbContext.SaveChangesAsync(cancellationToken);
 
-            return ResultHelper.Success(account.GetId());
+            return ResultHelper.Success(account.Id);
         }
     }
 }

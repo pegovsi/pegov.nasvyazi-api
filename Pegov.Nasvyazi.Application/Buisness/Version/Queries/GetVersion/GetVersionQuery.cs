@@ -1,6 +1,6 @@
 using MediatR;
 
-namespace Pegov.Nasvayzi.Application.Buisness.Version.Queries.GetVersion
+namespace Pegov.Nasvyazi.Application.Buisness.Version.Queries.GetVersion
 {
     public class GetVersionQuery : IRequest<string>
     {
