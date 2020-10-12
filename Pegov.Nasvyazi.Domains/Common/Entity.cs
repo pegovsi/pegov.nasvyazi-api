@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace Pegov.Nasvyazi.Domains.Common
 {
-    public class Entity
+    public abstract class Entity
     {
         [NotMapped]
         [JsonIgnore]

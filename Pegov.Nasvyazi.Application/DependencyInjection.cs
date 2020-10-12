@@ -2,7 +2,6 @@ using System.Reflection;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using Pegov.Nasvyazi.Application.Common.Behaviours;
-using Pegov.Nasvyazi.Application.Common.Behaviours;
 
 namespace Pegov.Nasvyazi.Application
 {

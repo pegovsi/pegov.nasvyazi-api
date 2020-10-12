@@ -12,7 +12,8 @@ namespace Pegov.Nasvyazi.Application.Common.Extension
         public static async Task DispatchDomainEventsAsync(
             this IMediator mediator, IEnumerable<EntityEntry<Entity>> entityEntries)
         {
-            var domainEvents = entityEntries
+            var enumerable = entityEntries as EntityEntry<Entity>[] ?? entityEntries.ToArray();
+            var domainEvents = enumerable
                 .SelectMany(x => x.Entity.DomainEvents)
                 .ToList();
 
@@ -21,7 +22,7 @@ namespace Pegov.Nasvyazi.Application.Common.Extension
                 await mediator.Publish(domainEvent);
             }
 
-            entityEntries.ToList()
+            enumerable.ToList()
                 .ForEach(entity => entity.Entity.ClearDomainEvents());
         }
     }

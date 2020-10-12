@@ -59,6 +59,9 @@
                 <e p="CreateAccountCommandHandler.cs" t="Include" />
               </e>
             </e>
+            <e p="Notifications" t="Include">
+              <e p="AccountCreatedDomainEventHandler.cs" t="Include" />
+            </e>
             <e p="Queries" t="Include">
               <e p="GetAccountById" t="Include">
                 <e p="GetAccountByIdQuery.cs" t="Include" />
@@ -138,6 +141,14 @@
           </e>
         </e>
         <e p="Pegov.Nasvyazi.Application.csproj" t="IncludeRecursive" />
+        <e p="System" t="Include">
+          <e p="Commands" t="Include">
+            <e p="SeedSampleData" t="Include">
+              <e p="SampleDataSeeder.cs" t="Include" />
+              <e p="SeedSampleDataCommandHandler.cs" t="Include" />
+            </e>
+          </e>
+        </e>
       </e>
       <e p="Pegov.Nasvyazi.Application.Test" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
@@ -179,11 +190,40 @@
           <e p="Accounts" t="Include">
             <e p="Account.cs" t="Include" />
             <e p="EmailValueObject.cs" t="Include" />
+            <e p="Notifications" t="Include">
+              <e p="AccountCreatedDomainEvent.cs" t="Include" />
+            </e>
             <e p="PhoneValueObject.cs" t="Include" />
           </e>
+          <e p="Chats" t="Include">
+            <e p="AccountChat.cs" t="Include" />
+            <e p="Chat.cs" t="Include" />
+          </e>
+          <e p="Groups" t="Include">
+            <e p="Group.cs" t="Include" />
+          </e>
           <e p="Organizations" t="Include">
+            <e p="AccountOrganization.cs" t="Include" />
             <e p="Organization.cs" t="Include" />
           </e>
+          <e p="Positions" t="Include">
+            <e p="AccountPosition.cs" t="Include" />
+            <e p="Position.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Enumerations" t="Include">
+          <e p="AccountStatus.cs" t="Include" />
+          <e p="ChatStatus.cs" t="Include" />
+          <e p="ChatType.cs" t="Include" />
+          <e p="EntityStatus.cs" t="Include" />
+          <e p="GroupType.cs" t="Include" />
+        </e>
+        <e p="Exceptions" t="Include">
+          <e p="AccountStatusException.cs" t="Include" />
+          <e p="ChatStatusException.cs" t="Include" />
+          <e p="ChatTypeException.cs" t="Include" />
+          <e p="EntityStatusException.cs" t="Include" />
+          <e p="GroupTypeException.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">

@@ -10,6 +10,9 @@ using Pegov.Nasvyazi.Domains.Common;
 using Pegov.Nasvyazi.Domains.Entities.Accounts;
 using Pegov.Nasvyazi.Domains.Entities.Organizations;
 using Pegov.Nasvyazi.Application.Common.Interfaces;
+using Pegov.Nasvyazi.Domains.Entities.Groups;
+using Pegov.Nasvyazi.Domains.Entities.Positions;
+using Pegov.Nasvyazi.Domains.Enumerations;
 
 namespace Pegov.Nasvyazi.Persistence.Postgres
 {
@@ -29,11 +32,17 @@ namespace Pegov.Nasvyazi.Persistence.Postgres
 
         public DbSet<Account> Accounts { get; set; }
         public DbSet<Organization> Organizations { get; set; }
+        public DbSet<Group> Groups { get; set; }
+        public DbSet<Position> Positions { get; set; }
 
-
+        public DbSet<AccountStatus> AccountStatuses { get; set; }
+        public DbSet<EntityStatus> EntityStatuses { get; set; }
+        public DbSet<ChatStatus> ChatStatuses { get; set; }
+        public DbSet<ChatType> ChatTypes { get; set; }
+        public DbSet<GroupType> GroupTypes { get; set; }
 
         public DbContext DbContext => this;
-        public System.Data.Common.DbConnection DbConnection => this.Database.GetDbConnection();
+        public System.Data.Common.DbConnection DbConnection => Database.GetDbConnection();
 
         //public DbSet<UserMasterDataFieldView> UserMasterDataFieldView { get; set; }
 
@@ -72,6 +81,14 @@ namespace Pegov.Nasvyazi.Persistence.Postgres
                        // entry.Entity.ModifiedBy = currentUser.Id.ToString();
                         entry.Entity.Modified = dateTime;
                         break;
+                    case EntityState.Detached:
+                        break;
+                    case EntityState.Unchanged:
+                        break;
+                    case EntityState.Deleted:
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException();
                 }
             }
 
