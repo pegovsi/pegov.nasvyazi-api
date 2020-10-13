@@ -12,7 +12,9 @@ namespace Pegov.Nasvyazi.Api.Extensions
             this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<AppDbContext>(options =>
-                options.UseNpgsql(configuration.GetSection("ConnectionStrings:Database").Value));
+                options.UseNpgsql(
+                    configuration.GetSection("ConnectionStrings:Database").Value,
+                    b => b.MigrationsAssembly(typeof(AppDbContext).Assembly.FullName)));
 
             services.AddScoped<IAppDbContext>(provider => provider.GetService<AppDbContext>());
             
