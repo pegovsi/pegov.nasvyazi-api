@@ -31,8 +31,8 @@ namespace Pegov.Nasvyazi.Domains.Entities.Accounts
         {
             FirstName = firstName;
             LastName = lastName;
-            Email = new Email(email);
-            Phone = new Phone(phone);
+            Email = Email.Create(email);
+            Phone = Phone.Create(phone);
         }
 
         public void GetHeader()
@@ -123,7 +123,17 @@ namespace Pegov.Nasvyazi.Domains.Entities.Accounts
         {
             _accountStatusId = AccountStatus.Blocked.Id;
         }
-        
+
+        public void SetPhone(string phone)
+        {
+            Phone = Phone.Create(phone);
+        }
+
+        public void SetEmail(string email)
+        {
+            Email = Email.Create(email);
+        }
+
         #endregion
 
         #region Events

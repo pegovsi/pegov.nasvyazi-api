@@ -229,6 +229,7 @@
         </e>
         <e p="Exceptions" t="Include">
           <e p="AccountStatusException.cs" t="Include" />
+          <e p="ArgumentNotValidException.cs" t="Include" />
           <e p="ChatStatusException.cs" t="Include" />
           <e p="ChatTypeException.cs" t="Include" />
           <e p="EntityStatusException.cs" t="Include" />

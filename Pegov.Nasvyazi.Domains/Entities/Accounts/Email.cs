@@ -1,21 +1,21 @@
 using System.Collections.Generic;
 using Pegov.Nasvyazi.Domains.Common;
+using Pegov.Nasvyazi.Domains.Exceptions;
 
 namespace Pegov.Nasvyazi.Domains.Entities.Accounts
 {
     public class Email : ValueObject
     {
-        private Email()
+        private Email(string email)
         {
-        }
-
-        public Email(string email)
-        {
-            //здксь логика проверки, регулярки и т.д.
+            if (string.IsNullOrWhiteSpace(email))
+                throw new ArgumentNotValidException(nameof(email));
+            
             Address = email;
         }
+        public static Email Create(string email) => new Email(email);
 
-        public string Address { get; private set; }
+        public string Address { get; }
 
         protected override IEnumerable<object> GetAtomicValues()
         {
