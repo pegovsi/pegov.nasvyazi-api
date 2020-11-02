@@ -12,7 +12,7 @@ namespace Pegov.Nasvyazi.Domains.Entities.Positions
         {
             Id = Guid.NewGuid();
             _entityStatusId = EntityStatus.Active.Id;
-            _accounts = new List<Account>();
+            _accountPositions = new List<AccountPosition>();
         }
         public Position(string name) 
             : this()
@@ -37,8 +37,8 @@ namespace Pegov.Nasvyazi.Domains.Entities.Positions
         private int _entityStatusId;
         public EntityStatus EntityStatus { get; protected set; }
         
-        private readonly List<Account> _accounts;
-        public IReadOnlyCollection<Account> Accounts => _accounts;
+        private readonly List<AccountPosition> _accountPositions;
+        public IReadOnlyCollection<AccountPosition> Accounts => _accountPositions;
 
         public void Delete()
         {

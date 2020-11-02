@@ -9,7 +9,7 @@ using Pegov.Nasvyazi.Common;
 
 namespace Pegov.Nasvyazi.Application.Infrastructure
 {
-    public abstract class HandlerBase<TQ, TM> : IRequestHandler<TQ, TM>
+    public abstract class CommandHandler<TQ, TM> : IRequestHandler<TQ, TM>
         where TQ : IRequest<TM>
     {
         protected IAppDbContext DbContext { get; private set; }
@@ -17,7 +17,7 @@ namespace Pegov.Nasvyazi.Application.Infrastructure
         protected ICurrentUserService CurrentUserService { get; private set; }
         protected IMapper Mapper { get; private set; }
 
-        protected HandlerBase(IAppDbContext context, IRavenStore store, ICurrentUserService currentUserService, IMapper mapper)
+        protected CommandHandler(IAppDbContext context, IRavenStore store, ICurrentUserService currentUserService, IMapper mapper)
         {
             DbContext = context ?? throw new ArgumentNullException(nameof(context));
             Store = store ?? throw new ArgumentNullException(nameof(store));

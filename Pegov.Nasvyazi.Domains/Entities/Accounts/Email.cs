@@ -3,23 +3,23 @@ using Pegov.Nasvyazi.Domains.Common;
 
 namespace Pegov.Nasvyazi.Domains.Entities.Accounts
 {
-    public class EmailValueObject : ValueObject
+    public class Email : ValueObject
     {
-        private EmailValueObject()
+        private Email()
         {
         }
 
-        public EmailValueObject(string email)
+        public Email(string email)
         {
             //здксь логика проверки, регулярки и т.д.
-            Email = email;
+            Address = email;
         }
 
-        public string Email { get; private set; }
+        public string Address { get; private set; }
 
         protected override IEnumerable<object> GetAtomicValues()
         {
-            yield return Email;
+            yield return Address;
         }
     }
 }

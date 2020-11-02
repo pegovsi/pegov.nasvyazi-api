@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\pegov\.nuget\packages\microsoft.net.test.sdk\16.7.1\build\netcoreapp2.1" t="Include">
+    <e p="$USER_HOME$/.nuget/packages/microsoft.net.test.sdk/16.7.1/build/netcoreapp2.1" t="Include">
       <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
     </e>
-    <e p="C:\Users\pegov\.nuget\packages\microsoft.testplatform.testhost\16.7.1\build\netcoreapp2.1\x64\testhost.dll" t="Include" />
-    <e p="C:\Users\pegov\.nuget\packages\microsoft.testplatform.testhost\16.7.1\build\netcoreapp2.1\x64\testhost.exe" t="Include" />
-    <e p="C:\Users\pegov\.nuget\packages\xunit.runner.visualstudio\2.4.3\build\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll" t="Include" />
-    <e p="C:\Users\pegov\.nuget\packages\xunit.runner.visualstudio\2.4.3\build\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll" t="Include" />
-    <e p="C:\Users\pegov\.nuget\packages\xunit.runner.visualstudio\2.4.3\build\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll" t="Include" />
-    <e p="C:\Users\pegov\AppData\local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\pegov\AppData\local\JetBrains\Rider2020.2\resharper-host\local\Transient\Rider\v202\SolutionCaches\_pegov.nasvyazi-api.1849749656.00" t="ExcludeRecursive" />
-    <e p="E:\Projects\github\pegov.nasvyazi-api" t="IncludeFlat">
+    <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.4.3/build/netcoreapp2.1/xunit.runner.reporters.netcoreapp10.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.4.3/build/netcoreapp2.1/xunit.runner.utility.netcoreapp10.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.4.3/build/netcoreapp2.1/xunit.runner.visualstudio.dotnetcore.testadapter.dll" t="Include" />
+    <e p="$APPLICATION_CONFIG_DIR$/consoles/db" t="IncludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.2/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.2/resharper-host/local/Transient/Rider/v202/SolutionCaches/_pegov.nasvyazi-api.2026829713.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="pegov.nasvyazi-api.sln" t="IncludeFlat" />
       <e p="Pegov.Nasvyazi.Api" t="IncludeRecursive">
@@ -56,7 +56,7 @@
             <e p="Commands" t="Include">
               <e p="CreateAccount" t="Include">
                 <e p="CreateAccountCommand.cs" t="Include" />
-                <e p="CreateAccountCommandHandler.cs" t="Include" />
+                <e p="CreateAccountCommandCommandHandler.cs" t="Include" />
               </e>
             </e>
             <e p="Notifications" t="Include">
@@ -65,7 +65,7 @@
             <e p="Queries" t="Include">
               <e p="GetAccountById" t="Include">
                 <e p="GetAccountByIdQuery.cs" t="Include" />
-                <e p="GetAccountByIdQueryHandler.cs" t="Include" />
+                <e p="GetAccountByIdQueryCommandHandler.cs" t="Include" />
               </e>
               <e p="Models" t="Include">
                 <e p="AccountDto.cs" t="Include" />
@@ -76,7 +76,7 @@
             <e p="Commands" t="Include">
               <e p="SaveMessage" t="Include">
                 <e p="SaveMessageCommand.cs" t="Include" />
-                <e p="SaveMessageCommandHandler.cs" t="Include" />
+                <e p="SaveMessageCommandCommandHandler.cs" t="Include" />
               </e>
             </e>
           </e>
@@ -84,13 +84,13 @@
             <e p="Commands" t="Include">
               <e p="CreateOrganization" t="Include">
                 <e p="CreateOrganizationCommand.cs" t="Include" />
-                <e p="CreateOrganizationCommandHandler.cs" t="Include" />
+                <e p="CreateOrganizationCommandCommandHandler.cs" t="Include" />
               </e>
             </e>
             <e p="Queries" t="Include">
               <e p="GetOrganizationsPages" t="Include">
                 <e p="GetOrganizationsPagesQuery.cs" t="Include" />
-                <e p="GetOrganizationsPagesQueryHandler.cs" t="Include" />
+                <e p="GetOrganizationsPagesQueryCommandHandler.cs" t="Include" />
                 <e p="OrganizationViewModel.cs" t="Include" />
               </e>
               <e p="Models" t="Include">
@@ -102,7 +102,7 @@
             <e p="Queries" t="Include">
               <e p="GetVersion" t="Include">
                 <e p="GetVersionQuery.cs" t="Include" />
-                <e p="GetVersionQueryHandler.cs" t="Include" />
+                <e p="GetVersionQueryCommandHandler.cs" t="Include" />
               </e>
             </e>
           </e>
@@ -125,12 +125,13 @@
           </e>
           <e p="Interfaces" t="Include">
             <e p="IAppDbContext.cs" t="Include" />
+            <e p="IJwtManager.cs" t="Include" />
           </e>
           <e p="MiscProfile.cs" t="Include" />
         </e>
         <e p="DependencyInjection.cs" t="Include" />
         <e p="Infrastructure" t="Include">
-          <e p="HandlerBase.cs" t="Include" />
+          <e p="CommandHandler.cs" t="Include" />
           <e p="IRavenStore.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -141,6 +142,14 @@
           </e>
         </e>
         <e p="Pegov.Nasvyazi.Application.csproj" t="IncludeRecursive" />
+        <e p="Services" t="Include">
+          <e p="Identity" t="Include">
+            <e p="ApplicationUser.cs" t="Include" />
+            <e p="AuthorizationOptions.cs" t="Include" />
+            <e p="JwtManager.cs" t="Include" />
+            <e p="SessionUser.cs" t="Include" />
+          </e>
+        </e>
         <e p="System" t="Include">
           <e p="Commands" t="Include">
             <e p="SeedSampleData" t="Include">
@@ -189,11 +198,11 @@
         <e p="Entities" t="Include">
           <e p="Accounts" t="Include">
             <e p="Account.cs" t="Include" />
-            <e p="EmailValueObject.cs" t="Include" />
+            <e p="Email.cs" t="Include" />
             <e p="Notifications" t="Include">
               <e p="AccountCreatedDomainEvent.cs" t="Include" />
             </e>
-            <e p="PhoneValueObject.cs" t="Include" />
+            <e p="Phone.cs" t="Include" />
           </e>
           <e p="Chats" t="Include">
             <e p="AccountChat.cs" t="Include" />
@@ -239,9 +248,28 @@
         <e p="AppDbContext.cs" t="Include" />
         <e p="AppDbContextFactory.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Configurations" t="Include" />
+        <e p="Configurations" t="Include">
+          <e p="AccountChatConfiguration.cs" t="Include" />
+          <e p="AccountConfiguration.cs" t="Include" />
+          <e p="AccountOrganizationConfiguration.cs" t="Include" />
+          <e p="AccountPositionConfiguration.cs" t="Include" />
+          <e p="AccountStatusConfiguration.cs" t="Include" />
+          <e p="ChatConfiguration.cs" t="Include" />
+          <e p="ChatStatusConfiguration.cs" t="Include" />
+          <e p="ChatTypeConfiguration.cs" t="Include" />
+          <e p="EntityStatusConfiguration.cs" t="Include" />
+          <e p="GroupConfiguration.cs" t="Include" />
+          <e p="GroupTypeConfiguration.cs" t="Include" />
+          <e p="OrganizationConfiguration.cs" t="Include" />
+          <e p="PositionConfiguration.cs" t="Include" />
+        </e>
         <e p="DependencyInjection.cs" t="Include" />
         <e p="DesignTimeDbContextFactoryBase.cs" t="Include" />
+        <e p="Migrations" t="Include">
+          <e p="20201013211045_init.cs" t="Include" />
+          <e p="20201013211045_init.Designer.cs" t="Include" />
+          <e p="AppDbContextModelSnapshot.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">

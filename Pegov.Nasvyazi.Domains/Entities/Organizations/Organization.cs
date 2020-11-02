@@ -11,7 +11,7 @@ namespace Pegov.Nasvyazi.Domains.Entities.Organizations
         {
             Id = Guid.NewGuid();
             _entityStatusId = EntityStatus.Active.Id;
-            _accountOrganizations = new List<AccountOrganization>();
+            //_accountOrganizations = new List<AccountOrganization>();
         }
 
         public Organization(string name, string inn, string kpp)
@@ -31,8 +31,8 @@ namespace Pegov.Nasvyazi.Domains.Entities.Organizations
         public string Inn { get; protected set; }
         public string Kpp { get; protected set; }
 
-        private readonly List<AccountOrganization> _accountOrganizations;
-        public IReadOnlyCollection<AccountOrganization> Accounts => _accountOrganizations;
+        //private readonly List<AccountOrganization> _accountOrganizations;
+        public ICollection<AccountOrganization> Accounts { get; protected set; }
 
         private int _entityStatusId;
         public EntityStatus EntityStatus { get; protected set; }
@@ -44,7 +44,7 @@ namespace Pegov.Nasvyazi.Domains.Entities.Organizations
                 AccountId = accountId,
                 OrganizationId = Id
             };
-            _accountOrganizations.Add(organization);
+            //_accountOrganizations.Add(organization);
         }
         public void AddAccount(IEnumerable<Guid> accountIds)
         {
@@ -55,7 +55,7 @@ namespace Pegov.Nasvyazi.Domains.Entities.Organizations
                     AccountId = accountId,
                     OrganizationId = Id
                 };
-                _accountOrganizations.Add(organization);   
+                //_accountOrganizations.Add(organization);   
             }
         }
         public void Delete()

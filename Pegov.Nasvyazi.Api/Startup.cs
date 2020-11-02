@@ -2,24 +2,28 @@ using System.Linq;
 using System.Reflection;
 using AutoMapper;
 using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 
 using Pegov.Nasvyazi.Api.Extensions;
 using Pegov.Nasvyazi.Application;
+using Pegov.Nasvyazi.Application.Common.Interfaces;
 using Pegov.Nasvyazi.Application.Infrastructure;
+using Pegov.Nasvyazi.Application.Services.Identity;
 using Pegov.Nasvyazi.Common;
 
 namespace pegov.Nasvyazi.Api
 {
     public class Startup
     {
-        private readonly Assembly _assemblyApplication = typeof(HandlerBase<,>).GetTypeInfo().Assembly;
+        private readonly Assembly _assemblyApplication = typeof(CommandHandler<,>).GetTypeInfo().Assembly;
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -36,6 +40,27 @@ namespace pegov.Nasvyazi.Api
 
             services.AddOptions();
 
+            services.AddTransient<IJwtManager, JwtManager>();
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
+                {
+                    options.RequireHttpsMetadata = false;
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = true,
+                        ValidIssuer = AuthorizationOptions.ISSUER,
+
+                        ValidateAudience = true,
+                        ValidAudience = AuthorizationOptions.AUDIENCE,
+
+                        ValidateLifetime = true,
+
+                        IssuerSigningKey = AuthorizationOptions.Create(AuthorizationOptions.KEY),
+                        ValidateIssuerSigningKey = true
+                    };
+                });
+            
             services.AddCors(o => o.AddPolicy("CorsPolicy", builder =>
             {
                 builder.AllowAnyOrigin()

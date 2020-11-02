@@ -9,9 +9,9 @@ using Pegov.Nasvyazi.Common;
 
 namespace Pegov.Nasvyazi.Application.Buisness.Accounts.Commands.CreateAccount
 {
-    public class CreateAccountCommandHandler : HandlerBase<CreateAccountCommand, Result<Guid>>
+    public class CreateAccountCommandCommandHandler : CommandHandler<CreateAccountCommand, Result<Guid>>
     {
-        public CreateAccountCommandHandler(IAppDbContext context, IRavenStore store, ICurrentUserService currentUserService, IMapper mapper)
+        public CreateAccountCommandCommandHandler(IAppDbContext context, IRavenStore store, ICurrentUserService currentUserService, IMapper mapper)
             : base(context, store, currentUserService, mapper)
         {
         }

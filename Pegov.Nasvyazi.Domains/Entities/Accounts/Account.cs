@@ -18,7 +18,7 @@ namespace Pegov.Nasvyazi.Domains.Entities.Accounts
         {
             Id = Guid.NewGuid();
             _accountStatusId = AccountStatus.Active.Id;
-            _accountOrganizations = new List<AccountOrganization>();
+            //_accountOrganizations = new List<AccountOrganization>();
             _accountPositions = new List<AccountPosition>();
             _accountChats = new List<AccountChat>();
             _groups = new List<Group>();
@@ -31,24 +31,29 @@ namespace Pegov.Nasvyazi.Domains.Entities.Accounts
         {
             FirstName = firstName;
             LastName = lastName;
-            Email = new EmailValueObject(email);
-            Phone = new PhoneValueObject(phone);
+            Email = new Email(email);
+            Phone = new Phone(phone);
         }
-        
+
+        public void GetHeader()
+        {
+            
+        }
+
         #endregion
 
         #region Property
         
         public string FirstName { get; protected set; }
         public string LastName { get; protected set; }
-        public EmailValueObject Email { get; protected set; }
-        public PhoneValueObject Phone { get; protected set; }
+        public Email Email { get; protected set; }
+        public Phone Phone { get; protected set; }
 
         private int _accountStatusId;
         public AccountStatus AccountStatus { get; protected set; }
 
-        private readonly List<AccountOrganization> _accountOrganizations;
-        public IReadOnlyCollection<AccountOrganization> Organization => _accountOrganizations;
+        //private readonly List<AccountOrganization> _accountOrganizations;
+        public ICollection<AccountOrganization> Organizations { get; protected set; }
 
         private readonly List<AccountPosition> _accountPositions;
         public IReadOnlyCollection<AccountPosition> Positions => _accountPositions;
@@ -70,7 +75,7 @@ namespace Pegov.Nasvyazi.Domains.Entities.Accounts
                 AccountId = Id,
                 OrganizationId = organizationId
             };
-            _accountOrganizations.Add(organization);
+           // _accountOrganizations.Add(organization);
         }
         public void AddOrganization(IEnumerable<Guid> organizationIds)
         {
@@ -81,7 +86,7 @@ namespace Pegov.Nasvyazi.Domains.Entities.Accounts
                     AccountId = Id,
                     OrganizationId = organizationId
                 };
-                _accountOrganizations.Add(organization);   
+                //_accountOrganizations.Add(organization);   
             }
         }
         public void AddPosition(Guid positionId)

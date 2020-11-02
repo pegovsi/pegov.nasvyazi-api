@@ -8,9 +8,9 @@ using Pegov.Nasvyazi.Common;
 
 namespace Pegov.Nasvyazi.Application.Buisness.Version.Queries.GetVersion
 {
-    public class GetVersionQueryHandler : HandlerBase<GetVersionQuery, string>
+    public class GetVersionQueryCommandHandler : CommandHandler<GetVersionQuery, string>
     {
-        public GetVersionQueryHandler(IAppDbContext context, IRavenStore store, ICurrentUserService currentUserService, IMapper mapper)
+        public GetVersionQueryCommandHandler(IAppDbContext context, IRavenStore store, ICurrentUserService currentUserService, IMapper mapper)
             : base(context, store, currentUserService, mapper)
         {
         }

@@ -10,9 +10,9 @@ using Pegov.Nasvyazi.Common;
 
 namespace Pegov.Nasvyazi.Application.Buisness.Accounts.Queries.GetAccountById
 {
-    public class GetAccountByIdQueryHandler : HandlerBase<GetAccountByIdQuery, AccountDto>
+    public class GetAccountByIdQueryCommandHandler : CommandHandler<GetAccountByIdQuery, AccountDto>
     {
-        public GetAccountByIdQueryHandler(IAppDbContext context, IRavenStore store, ICurrentUserService currentUserService, IMapper mapper)
+        public GetAccountByIdQueryCommandHandler(IAppDbContext context, IRavenStore store, ICurrentUserService currentUserService, IMapper mapper)
             : base(context, store, currentUserService, mapper)
         {
         }
@@ -33,7 +33,7 @@ namespace Pegov.Nasvyazi.Application.Buisness.Accounts.Queries.GetAccountById
             // var organizationDtos = Mapper.Map<IEnumerable<OrganizationDto>>(organizations);
             // accountDto.Organizations = organizationDtos;
             // return accountDto;
-            return null;
+            return await Task.FromResult(new AccountDto());
         }
     }
 }

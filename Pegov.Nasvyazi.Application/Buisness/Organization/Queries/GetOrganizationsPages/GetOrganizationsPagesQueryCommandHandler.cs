@@ -11,9 +11,9 @@ using Raven.Client.Documents;
 
 namespace Pegov.Nasvyazi.Application.Buisness.Organization.Queries.GetOrganizationsPages
 {
-    public class GetOrganizationsPagesQueryHandler : HandlerBase<GetOrganizationsPagesQuery, OrganizationViewModel>
+    public class GetOrganizationsPagesQueryCommandHandler : CommandHandler<GetOrganizationsPagesQuery, OrganizationViewModel>
     {
-        public GetOrganizationsPagesQueryHandler(IAppDbContext context, IRavenStore store, ICurrentUserService currentUserService, IMapper mapper)
+        public GetOrganizationsPagesQueryCommandHandler(IAppDbContext context, IRavenStore store, ICurrentUserService currentUserService, IMapper mapper)
             : base(context, store, currentUserService, mapper)
         {
         }

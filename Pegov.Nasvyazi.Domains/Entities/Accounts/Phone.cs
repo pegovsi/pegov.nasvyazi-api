@@ -3,22 +3,22 @@ using Pegov.Nasvyazi.Domains.Common;
 
 namespace Pegov.Nasvyazi.Domains.Entities.Accounts
 {
-    public class PhoneValueObject : ValueObject
+    public class Phone : ValueObject
     {
-        private PhoneValueObject()
+        private Phone()
         {
         }
 
-        public PhoneValueObject(string phone)
+        public Phone(string phone)
         {
-            Phone = phone;
+            Number = phone;
         }
 
-        public string Phone { get; private set; }
+        public string Number { get; private set; }
 
         protected override IEnumerable<object> GetAtomicValues()
         {
-            yield return Phone;
+            yield return Number;
         }
     }
 }

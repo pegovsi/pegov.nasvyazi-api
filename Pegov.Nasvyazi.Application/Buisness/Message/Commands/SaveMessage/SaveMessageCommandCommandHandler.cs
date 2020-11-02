@@ -8,9 +8,9 @@ using Pegov.Nasvyazi.Common;
 
 namespace Pegov.Nasvyazi.Application.Buisness.Message.Commands.SaveMessage
 {
-    public class SaveMessageCommandHandler : HandlerBase<SaveMessageCommand, Result<Guid>>
+    public class SaveMessageCommandCommandHandler : CommandHandler<SaveMessageCommand, Result<Guid>>
     {
-        public SaveMessageCommandHandler(IAppDbContext context, IRavenStore store, ICurrentUserService currentUserService, IMapper mapper) 
+        public SaveMessageCommandCommandHandler(IAppDbContext context, IRavenStore store, ICurrentUserService currentUserService, IMapper mapper) 
             : base(context, store, currentUserService, mapper)
         {
         }
