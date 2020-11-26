@@ -2,6 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
+        <LangVersion>9</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -10,11 +11,11 @@
       <ProjectReference Include="..\Pegov.Nasvyazi.Raven.Domains\Pegov.Nasvyazi.Raven.Domains.csproj" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="AutoMapper" Version="10.0.0" />
-        <PackageReference Include="FluentValidation" Version="9.2.2" />
+        <PackageReference Include="AutoMapper" Version="10.1.1" />
+        <PackageReference Include="FluentValidation" Version="9.3.0" />
         <PackageReference Include="MediatR" Version="9.0.0" />
         <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.9" />
-        <PackageReference Include="RavenDB.Client" Version="5.0.3" />        
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.0" />
+        <PackageReference Include="RavenDB.Client" Version="5.1.0" />        
     </ItemGroup>
 </Project>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$USER_HOME$/.nuget/packages/microsoft.net.test.sdk/16.7.1/build/netcoreapp2.1" t="Include">
+    <e p="$USER_HOME$/.nuget/packages/microsoft.net.test.sdk/16.8.0/build/netcoreapp2.1" t="Include">
       <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
     </e>
     <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.4.3/build/netcoreapp2.1/xunit.runner.reporters.netcoreapp10.dll" t="Include" />
@@ -37,7 +37,7 @@
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
-            <e p="netcoreapp3.1" t="Include">
+            <e p="netcoreapp5.0" t="Include">
               <e p="Pegov.Nasvyazi.Api.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
@@ -163,7 +163,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
-            <e p="netcoreapp3.1" t="Include">
+            <e p="netcoreapp5.0" t="Include">
               <e p="Pegov.Nasvyazi.Application.Test.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
@@ -273,7 +273,7 @@
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
-            <e p="netcoreapp3.1" t="Include">
+            <e p="netcoreapp5.0" t="Include">
               <e p="Pegov.Nasvyazi.Persistence.Postgres.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
@@ -286,7 +286,7 @@
         <e p="DocumentStoreHolder.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
-            <e p="netcoreapp3.1" t="Include">
+            <e p="netcoreapp5.0" t="Include">
               <e p="Pegov.Nasvyazi.Persistence.Raven.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
@@ -322,7 +322,7 @@
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
-            <e p="netcoreapp3.1" t="Include">
+            <e p="netcoreapp5.0" t="Include">
               <e p="Pegov.Nasvyazi.Rest.Function.Test.AssemblyInfo.cs" t="Include" />
             </e>
           </e>

@@ -1,8 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <TargetFramework>netcoreapp5.0</TargetFramework>
         <RootNamespace>Pegov.Nasvyazi.Persistence</RootNamespace>
+        <LangVersion>9</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -14,7 +15,7 @@
     <ItemGroup>
       <PackageReference Include="MediatR" Version="9.0.0" />
       <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
-      <PackageReference Include="RavenDB.Client" Version="5.0.3" />
+      <PackageReference Include="RavenDB.Client" Version="5.1.0" />
     </ItemGroup>
     
 </Project>
